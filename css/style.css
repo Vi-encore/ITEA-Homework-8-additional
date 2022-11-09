@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+}
+
+@keyframes bounce {
+  0% {
+    top: -10%;
+    width: 20px;
+  }
+
+  15% {
+    width: 40px;
+    height: 20px;
+    top: 70%;
+    animation-timing-function: ease-out;
+    transform: rotateZ(0);
+  }
+
+  35% {
+    width: 40px;
+    height: 40px;
+    top: 20%;
+    animation-timing-function: ease-in;
+    transform: rotateZ(0);
+  }
+
+  55% {
+    width: 40px;
+    height: 20px;
+    top: 70%;
+    border-radius: 50%;
+    animation-timing-function: ease-out;
+    transform: rotateZ(0);
+  }
+  80% {
+    height: 40px;
+    top: 25%;
+    border-radius: 2px;
+    transform: rotateZ(-180deg);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    top: 100%;
+    transform: rotateZ(-180deg);
+    border-radius: 2px;
+  }
+}
+
+.container {
+  background-color: #2277c3;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ball {
+  position: absolute;
+  left: 50%;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 2.7s;
+  width: 40px;
+  height: 40px;
+  background-color: #f0f8ff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 3px #38383814;
+}
